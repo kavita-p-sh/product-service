@@ -1,15 +1,15 @@
 package com.ecommerce.product.service.impl;
 
 
-import com.ecommerce.common.entity.ProductEntity;
 import com.ecommerce.common.exception.ResourceNotFoundException;
-import com.ecommerce.common.repository.ProductRepository;
+import com.ecommerce.product.repository.ProductRepository;
 import com.ecommerce.common.util.AppConstants;
 import com.ecommerce.common.util.CacheConstant;
 import com.ecommerce.product.dto.ProductRequestDTO;
 import com.ecommerce.product.dto.ProductResponseDTO;
 import com.ecommerce.product.dto.ProductUpdateDTO;
 import com.ecommerce.common.exception.BadRequestException;
+import com.ecommerce.product.entity.ProductEntity;
 import com.ecommerce.product.mapper.ProductMapper;
 import com.ecommerce.product.service.ProductService;
 import lombok.RequiredArgsConstructor;
