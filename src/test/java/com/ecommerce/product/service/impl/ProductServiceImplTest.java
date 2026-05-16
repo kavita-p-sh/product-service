@@ -1,10 +1,10 @@
 package com.ecommerce.product.service.impl;
 
 
-import com.ecommerce.common.entity.ProductEntity;
+import com.ecommerce.product.entity.ProductEntity;
 import com.ecommerce.common.exception.BadRequestException;
 import com.ecommerce.common.exception.ResourceNotFoundException;
-import com.ecommerce.common.repository.ProductRepository;
+import com.ecommerce.product.repository.ProductRepository;
 import com.ecommerce.product.dto.ProductRequestDTO;
 import com.ecommerce.product.dto.ProductResponseDTO;
 import com.ecommerce.product.dto.ProductUpdateDTO;

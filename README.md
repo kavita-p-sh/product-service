@@ -87,7 +87,7 @@ spring.application.name=product-service
 server.port=8097
 
 # Database
-spring.datasource.url=jdbc:mysql://localhost:3306/ecom_db
+spring.datasource.url=jdbc:mysql://localhost:3306/product_service_db
 spring.datasource.username=root
 spring.datasource.password=your_password
 

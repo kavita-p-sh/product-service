@@ -2,15 +2,12 @@ package com.ecommerce.product;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @SpringBootApplication(scanBasePackages = {
 		"com.ecommerce.product",
 		"com.ecommerce.common"
 })
-@EntityScan(basePackages = {
-		"com.ecommerce.common.entity"
-})
+
 
 public class ProductServiceApplication {
 
