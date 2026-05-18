@@ -203,5 +203,36 @@ public class ProductServiceImpl implements ProductService {
         log.info("Product deleted successfully with id: {}", id);
     }
 
+    @Transactional
+    public void reduceStock(Long productId, Integer quantity) {
+
+        if (quantity == null || quantity <= 0) {
+            throw new BadRequestException(AppConstants.PRODUCT_QUANTITY_INVALID);
+        }
+
+        if (!productRepository.existsById(productId)) {
+            throw new ResourceNotFoundException(AppConstants.PRODUCT_NOT_FOUND);
+        }
+
+        int updatedRows = productRepository.reduceStockIfAvailable(productId, quantity);
+
+        if (updatedRows == 0) {
+            throw new BadRequestException(AppConstants.INSUFFICIENT_PRODUCT_QUANTITY);
+        }
+    }
+    @Transactional
+    public void restoreStock(Long productId, Integer quantity) {
+
+        if (quantity == null || quantity <= 0) {
+            throw new BadRequestException(AppConstants.PRODUCT_QUANTITY_INVALID);
+        }
+
+        int updatedRows = productRepository.restoreStock(productId, quantity);
+
+        if (updatedRows == 0) {
+            throw new ResourceNotFoundException(AppConstants.PRODUCT_NOT_FOUND);
+        }
+    }
+
 
 }
